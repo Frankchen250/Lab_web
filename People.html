@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>People</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="JS/jquery.min.js"></script>
+    <script src="JS/popper.min.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+    <!-- <script src="https://maps.google.com/maps/api/js?key=AIzaSyC-_Rmxj8b2f8jpINfm6zSdvuUKOIfDJ1U"></script> -->
+    <script src="JS/map.js"></script>
+    <style type="text/css">
+        .jumbotron {
+            background: blue;
+            border-radius: 0;
+            padding: 0px;
+            height: 100px;
+            margin-bottom: 0px;
+        }
+
+        .nav-link {
+            margin-right: 20px;
+        }
+
+        .mb-3, .my-3 {
+            width: 250px;
+            margin-bottom: auto;
+        }
+
+        .profosser, .doctor, .master {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        .master,.doctor{
+            padding: 0px;
+            /*master_img:width=150;height=150*/
+        }
+        .card col-lg-3 col-md-3 doctor
+        {
+            width: 150px;
+            height: 150px;
+        }
+        h4
+        {
+            margin-left: 20px;
+            margin-top:10px;
+        }
+        .ovl
+        {
+            opacity: 0;
+            transition: 700ms;
+        }
+        .ovl:hover{
+            opacity: 0.7;
+            background: rgba(0,0,0,0.7);
+        }
+        .page-footer {
+            background: blue;
+        }
+        .card-text{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+<!--头部图片-->
+<div class="jumbotron">
+    <div class="container">
+    </div>
+</div>
+<!--导航栏-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!--There is lab icon-->
+    <a class="navbar-brand" href="#">
+        <img src="images/lab_icon.png" width="30" height="30" style="margin-right: 5px;" alt="">
+        lab 314
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--Navbar component-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">People</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Reserach</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                   data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    About
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Teacher</a>
+                    <a class="dropdown-item" href="#">Ph.D</a>
+                    <a class="dropdown-item" href="#">Master</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else</a>
+                </div>
+            </li>
+        </ul>
+        <!--Serach box-->
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username"
+                   aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" id="button-addon2">
+                    Go
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</nav>
+
+<div id="container">
+    <!--教授-->
+    <h4>Profossers</h4>
+    <hr>
+    <div class="row">
+        <div class="card col-lg-4 col-md-4 profosser" style="width:300px;height: 350px">
+            <img class="card-img-top" src="images/People.png" alt="Card image" style="width:200px">
+            <div class="card-body">
+            </div>
+        </div>
+        <div class="card col-lg-4 col-md-4 profosser" style="width:300px;height: 350px;">
+            <img class="card-img-top" src="images/People.png" alt="Card image" style="width:200px">
+            <div class="card-body">
+            </div>
+        </div>
+    </div>
+    <h4>Ph.D</h4>
+    <hr>
+    <!--博士-->
+    <div class="row">
+        <div class="card col-lg-3 col-md-3 doctor" >
+            <img class="card-img-top" src="images/People.png" alt="Card image" >
+            <div class="card-img-overlay ovl">
+                <p class="card-text">Some example text.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--硕士-->
+    <h4>Masters</h4>
+    <hr>
+    <div class="row">
+        <div class="card col-lg-2 col-md-2 master " >
+            <img class="card-img-top" src="images/chen.jpeg" alt="Card image">
+            <div class="card-img-overlay ovl" >
+                <p class="card-text">Some example text.</p>
+            </div>
+        </div>
+        <div class="card col-lg-2 col-md-2 master">
+            <img class="card-img-top" src="images/master.png" alt="Card image">
+            <div class="card-img-overlay ovl">
+                <p class="card-text">Some example text.</p>
+            </div>
+        </div>
+        <div class="card col-lg-2 col-md-2 master">
+            <img class="card-img-top" src="images/master.png" alt="Card image">
+            <div class="card-img-overlay ovl">
+                <p class="card-text">Some example text.</p>
+            </div>
+        </div>
+        <div class="card col-lg-2 col-md-2 master">
+            <img class="card-img-top" src="images/master.png" alt="Card image">
+            <div class="card-img-overlay ovl">
+                <p class="card-text">Some example text.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card col-lg-2 col-md-2 master">
+            <img class="card-img-top" src="images/People.png" alt="Card image">
+            <div class="card-img-overlay ovl" >
+                <p class="card-text">Some example text.</p>
+            </div>
+        </div>
+        <div class="card col-lg-2 col-md-2 master">
+            <img class="card-img-top" src="images/People.png" alt="Card image">
+            <div class="card-img-overlay ovl">
+                <p class="card-text">Some example text.</p>
+            </div>
+        </div>
+        <div class="card col-lg-2 col-md-2 master">
+            <img class="card-img-top" src="images/People.png" alt="Card image">
+            <div class="card-img-overlay ovl">
+                <p class="card-text">Some example text.</p>
+            </div>
+        </div>
+        <div class="card col-lg-2 col-md-2 master">
+            <img class="card-img-top" src="images/People.png" alt="Card image">
+            <div class="card-img-overlay ovl">
+                <p class="card-text">Some example text.</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<footer class="page-footer font-small blue">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:Frankchen
+        <a href="http://www.zju.edu.cn"> www.zju.edu.cn</a>
+    </div>
+
+</footer>
+</body>
+</html>
